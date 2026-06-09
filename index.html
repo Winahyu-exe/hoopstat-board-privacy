@@ -1,0 +1,548 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - HoopStat Board</title>
+  <meta name="description" content="Privacy Policy aplikasi HoopStat Board - Basketball Coaching Board & Statistics." />
+
+  <style>
+    :root {
+      --bg: #0b1118;
+      --card: #111b24;
+      --card-2: #17212b;
+      --text: #ffffff;
+      --muted: #b0bec5;
+      --soft: #90a4ae;
+      --accent: #ff9800;
+      --accent-soft: #ffcc80;
+      --green: #4caf50;
+      --blue: #64b5f6;
+      --border: rgba(255, 183, 77, 0.28);
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 152, 0, 0.16), transparent 34rem),
+        radial-gradient(circle at top right, rgba(100, 181, 246, 0.12), transparent 30rem),
+        linear-gradient(135deg, #0b1118 0%, #111820 48%, #0b1118 100%);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(23, 33, 43, 0.95), rgba(17, 27, 36, 0.98)),
+        linear-gradient(90deg, rgba(255, 152, 0, 0.12), transparent);
+      box-shadow: 0 22px 70px var(--shadow);
+      padding: 34px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255, 152, 0, 0.22), transparent 32%),
+        radial-gradient(circle at 84% 22%, rgba(255, 204, 128, 0.16), transparent 16rem);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      border: 1px solid rgba(255, 183, 77, 0.48);
+      background: rgba(255, 152, 0, 0.12);
+      color: var(--accent-soft);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--green);
+      box-shadow: 0 0 18px rgba(76, 175, 80, 0.8);
+    }
+
+    h1 {
+      margin: 18px 0 8px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -1.8px;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-card {
+      min-width: 220px;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(11, 17, 24, 0.68);
+      padding: 18px;
+    }
+
+    .hero-card .label {
+      color: var(--soft);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .hero-card .value {
+      margin-top: 8px;
+      color: var(--accent-soft);
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .hero-card .small {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .meta {
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      background: rgba(23, 33, 43, 0.78);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .meta span {
+      display: block;
+      color: var(--soft);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .meta strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 22px;
+      margin-top: 22px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      background: rgba(17, 27, 36, 0.88);
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .toc-title {
+      margin: 0 0 12px;
+      color: var(--accent-soft);
+      font-weight: 900;
+      font-size: 15px;
+    }
+
+    .toc a {
+      display: block;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .toc a:last-child {
+      border-bottom: none;
+    }
+
+    .toc a:hover {
+      color: var(--accent-soft);
+    }
+
+    .section {
+      border: 1px solid rgba(255, 183, 77, 0.18);
+      background:
+        linear-gradient(180deg, rgba(17, 27, 36, 0.96), rgba(17, 27, 36, 0.88));
+      border-radius: 22px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
+    }
+
+    .section h2 {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: -0.4px;
+    }
+
+    .bar {
+      width: 5px;
+      height: 28px;
+      border-radius: 99px;
+      background: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    p {
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      border: 1px solid rgba(76, 175, 80, 0.35);
+      background: rgba(76, 175, 80, 0.10);
+      border-radius: 16px;
+      padding: 14px;
+      color: #d7f5dd;
+      margin-top: 12px;
+    }
+
+    .warning {
+      border: 1px solid rgba(255, 183, 77, 0.42);
+      background: rgba(255, 152, 0, 0.10);
+      border-radius: 16px;
+      padding: 14px;
+      color: var(--accent-soft);
+      margin-top: 12px;
+    }
+
+    .contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #111820;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 900;
+      margin-top: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--soft);
+      font-size: 13px;
+      padding-top: 24px;
+    }
+
+    .footer strong {
+      color: var(--accent-soft);
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        padding: 24px;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-width: unset;
+      }
+
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-content">
+        <div>
+          <div class="badge"><span class="dot"></span> Privacy Policy</div>
+          <h1>HoopStat Board</h1>
+          <p class="subtitle">
+            Kebijakan privasi untuk aplikasi Android Basketball Coaching Board & Statistics
+            yang dirancang sebagai aplikasi offline-first untuk pencatatan pertandingan basket.
+          </p>
+
+          <div class="meta-grid">
+            <div class="meta">
+              <span>Terakhir diperbarui</span>
+              <strong>9 Juni 2026</strong>
+            </div>
+            <div class="meta">
+              <span>Developer</span>
+              <strong>Winahyu Pandu Rizki</strong>
+            </div>
+            <div class="meta">
+              <span>Package</span>
+              <strong>com.winahyu.hoopstatboard</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="label">Data Practice</div>
+          <div class="value">Local-first</div>
+          <div class="small">
+            Data pertandingan disimpan di perangkat pengguna dan tidak dikirim ke server developer.
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="Daftar isi">
+        <p class="toc-title">Daftar Isi</p>
+        <a href="#overview">Ringkasan</a>
+        <a href="#data">Data yang Diproses</a>
+        <a href="#storage">Penyimpanan Lokal</a>
+        <a href="#sharing">Berbagi PDF/CSV</a>
+        <a href="#third-party">Layanan Pihak Ketiga</a>
+        <a href="#security">Keamanan Data</a>
+        <a href="#deletion">Penghapusan Data</a>
+        <a href="#children">Privasi Anak</a>
+        <a href="#changes">Perubahan Kebijakan</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+
+      <section>
+        <article class="section" id="overview">
+          <h2><span class="bar"></span>Ringkasan</h2>
+          <p>
+            HoopStat Board adalah aplikasi Android untuk membantu pelatih, asisten pelatih,
+            atau pencatat pertandingan basket dalam mengelola tim, pemain, pertandingan,
+            papan catat digital, statistik, dan laporan pertandingan.
+          </p>
+          <p>
+            Aplikasi ini dirancang sebagai aplikasi offline-first/local-first. Artinya,
+            data utama aplikasi diproses dan disimpan secara lokal pada perangkat pengguna.
+            Aplikasi tidak membutuhkan login akun, tidak menampilkan iklan, dan tidak
+            mengirim data pertandingan ke server milik developer.
+          </p>
+          <div class="highlight">
+            HoopStat Board tidak menjual data pengguna dan tidak menggunakan data pengguna
+            untuk periklanan.
+          </div>
+        </article>
+
+        <article class="section" id="data">
+          <h2><span class="bar"></span>Data yang Diproses di Aplikasi</h2>
+          <p>
+            Untuk menjalankan fitur pencatatan pertandingan, pengguna dapat memasukkan
+            beberapa data secara manual ke dalam aplikasi, seperti:
+          </p>
+          <ul>
+            <li>Nama tim, kategori tim, warna tim, dan catatan tim.</li>
+            <li>Nama pemain, nomor jersey, posisi, status starter/bench, dan tim pemain.</li>
+            <li>Data pertandingan, seperti judul pertandingan, tim home/away, mode pertandingan, quarter, durasi, dan status pertandingan.</li>
+            <li>Catatan event pertandingan, seperti 2PT, 3PT, free throw, foul, violation, own basket, waktu game, quarter, pemain, tim, dan koordinat lapangan.</li>
+            <li>Data laporan yang dibuat dari catatan pertandingan, termasuk ringkasan statistik, timeline event, file PDF, dan file CSV.</li>
+          </ul>
+          <p>
+            Data tersebut digunakan untuk menampilkan scoreboard, statistik tim, statistik pemain,
+            timeline event, laporan pertandingan, dan file export yang dipilih oleh pengguna.
+          </p>
+        </article>
+
+        <article class="section" id="storage">
+          <h2><span class="bar"></span>Penyimpanan Lokal</h2>
+          <p>
+            Data HoopStat Board disimpan secara lokal di perangkat pengguna menggunakan database
+            lokal aplikasi. Data ini tetap berada di perangkat pengguna selama aplikasi masih
+            terpasang dan data aplikasi tidak dihapus.
+          </p>
+          <p>
+            Developer tidak memiliki akses langsung ke data lokal pengguna karena aplikasi tidak
+            mengunggah data pertandingan, data tim, data pemain, atau laporan ke server developer.
+          </p>
+          <div class="warning">
+            Jika pengguna menghapus aplikasi atau membersihkan data aplikasi melalui pengaturan
+            perangkat, data lokal seperti tim, pemain, pertandingan, statistik, dan laporan
+            dapat ikut terhapus.
+          </div>
+        </article>
+
+        <article class="section" id="sharing">
+          <h2><span class="bar"></span>Berbagi PDF, CSV, dan Ringkasan</h2>
+          <p>
+            HoopStat Board menyediakan fitur export dan berbagi laporan pertandingan dalam bentuk
+            PDF, CSV, dan ringkasan teks. File atau teks tersebut hanya dibagikan ketika pengguna
+            secara aktif memilih tombol export atau share di dalam aplikasi.
+          </p>
+          <p>
+            Saat pengguna membagikan PDF, CSV, atau ringkasan melalui aplikasi lain, seperti
+            WhatsApp, email, Google Drive, atau aplikasi lain yang tersedia di perangkat,
+            proses tersebut mengikuti kebijakan privasi aplikasi pihak ketiga yang dipilih oleh
+            pengguna.
+          </p>
+          <p>
+            HoopStat Board tidak mengirimkan file laporan secara otomatis ke server developer.
+          </p>
+        </article>
+
+        <article class="section" id="third-party">
+          <h2><span class="bar"></span>Layanan Pihak Ketiga</h2>
+          <p>
+            Pada versi saat ini, HoopStat Board tidak menggunakan login akun, layanan cloud,
+            iklan, analytics, atau pelacakan pengguna untuk tujuan pemasaran.
+          </p>
+          <p>
+            Jika pada versi mendatang aplikasi menambahkan layanan pihak ketiga seperti cloud sync,
+            analytics, crash reporting, login, atau iklan, kebijakan privasi ini akan diperbarui
+            agar menjelaskan jenis data yang dikumpulkan, tujuan penggunaan, dan cara data tersebut
+            diproses.
+          </p>
+        </article>
+
+        <article class="section" id="security">
+          <h2><span class="bar"></span>Keamanan Data</h2>
+          <p>
+            Karena data utama aplikasi disimpan secara lokal, keamanan data juga bergantung pada
+            keamanan perangkat pengguna. Pengguna disarankan untuk menggunakan kunci layar,
+            menjaga perangkat dari akses tidak sah, dan tidak membagikan file laporan kepada pihak
+            yang tidak berkepentingan.
+          </p>
+          <p>
+            HoopStat Board tidak meminta pengguna memasukkan password, akun pribadi, data pembayaran,
+            lokasi GPS, kontak, kamera, mikrofon, atau data sensitif lain yang tidak dibutuhkan
+            untuk fitur pencatatan pertandingan.
+          </p>
+        </article>
+
+        <article class="section" id="deletion">
+          <h2><span class="bar"></span>Penghapusan Data</h2>
+          <p>
+            Pengguna dapat menghapus data tertentu langsung dari aplikasi, seperti tim, pemain,
+            pertandingan, atau event pertandingan, selama aksi tersebut tersedia dan tidak dikunci
+            oleh aturan riwayat aplikasi.
+          </p>
+          <p>
+            Pengguna juga dapat menghapus seluruh data lokal aplikasi melalui pengaturan perangkat
+            Android dengan cara membersihkan data aplikasi atau menghapus aplikasi dari perangkat.
+          </p>
+          <p>
+            Karena HoopStat Board tidak menggunakan akun online dan tidak menyimpan data di server
+            developer, tidak ada data akun online yang perlu diminta untuk dihapus dari server.
+          </p>
+        </article>
+
+        <article class="section" id="children">
+          <h2><span class="bar"></span>Privasi Anak</h2>
+          <p>
+            HoopStat Board ditujukan sebagai alat bantu pencatatan pertandingan dan latihan basket
+            oleh pelatih, asisten pelatih, guru, pembina, atau pengguna yang membutuhkan pencatatan
+            statistik basket.
+          </p>
+          <p>
+            Aplikasi ini tidak dirancang untuk mengumpulkan data pribadi anak secara online dan tidak
+            menargetkan iklan kepada anak-anak. Jika aplikasi digunakan di lingkungan sekolah atau
+            pelatihan usia muda, pengguna bertanggung jawab untuk memastikan data pemain digunakan
+            secara wajar dan sesuai izin yang diperlukan di lingkungan masing-masing.
+          </p>
+        </article>
+
+        <article class="section" id="changes">
+          <h2><span class="bar"></span>Perubahan Kebijakan</h2>
+          <p>
+            Kebijakan privasi ini dapat diperbarui dari waktu ke waktu untuk menyesuaikan perubahan
+            fitur aplikasi, perubahan teknis, atau kebutuhan kebijakan platform distribusi aplikasi.
+          </p>
+          <p>
+            Tanggal pembaruan terakhir akan ditampilkan di bagian atas halaman ini.
+          </p>
+        </article>
+
+        <article class="section" id="contact">
+          <h2><span class="bar"></span>Kontak Developer</h2>
+          <p>
+            Jika ada pertanyaan tentang kebijakan privasi ini atau penggunaan data pada HoopStat Board,
+            pengguna dapat menghubungi developer melalui email berikut:
+          </p>
+          <a class="contact" href="mailto:winahyupandurizki@gmail.com">
+            winahyupandurizki@gmail.com
+          </a>
+        </article>
+      </section>
+    </div>
+
+    <footer class="footer">
+      © 2026 <strong>HoopStat Board</strong>. Basketball Coaching Board & Statistics.
+    </footer>
+  </main>
+</body>
+</html>
+```
